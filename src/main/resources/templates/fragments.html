@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Fragments</title>
+</head>
+<body>
+<div th:fragment="uploadButtons">
+    <h2>Upload Files</h2>
+    <form th:action="@{/uploadLogins}" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".csv" />
+        <button type="submit">Upload Logins</button>
+    </form>
+    <form th:action="@{/uploadElectives}" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".csv" />
+        <button type="submit">Upload Electives</button>
+    </form>
+</div>
+</body>
+</html>
